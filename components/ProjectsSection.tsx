@@ -5,7 +5,6 @@ import SlideUp from "./SlideUp"
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
-
   {
     name: "Project A4K",
     description:
@@ -14,6 +13,13 @@ const projects = [
     link: "https://www.instagram.com/project_a4k/",
   },
 
+  {
+    name: "Spotify Clone",
+    description:
+      "This application is a Spotify Clone that enables users to sign in to their Spotify accounts, allowing them to search for any song or artist they would like to listen to using the Spotify API. The lyrics are also displayed on the screen. Click on the link below to watch a demo!",
+    image: "/opt1.png",
+    link: "https://youtu.be/uoSJrK5LXOE",
+  },
   {
     name: "Predicting Miscarriage",
     description:
@@ -36,7 +42,6 @@ const projects = [
     image: "/profiling.png",
     link: "https://docs.google.com/document/d/1lOU9wuhSD-wnuSrQkX_7lQGHFdA_amcty0_Y6jBKJ0Q/edit?usp=sharing",    
   },
-
   {
     name: "ID Scan Attendance System",
     description:
@@ -61,7 +66,7 @@ const projects = [
 
 ]
 
-//manim, hackathon, spotify clone
+//manim, hackathon
 
 const ProjectsSection = () => {
   return (
