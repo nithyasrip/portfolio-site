@@ -1,15 +1,7 @@
-"use client"; // this is a client component
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll/modules";
 import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
-import { RiMoonFill, RiSunLine } from "react-icons/ri";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { AiTwotonePhone } from "react-icons/ai";
-import { LiaLinkedinIn } from "react-icons/lia";
 
 interface ContactIcon {
   icon: React.ReactElement;
@@ -18,7 +10,7 @@ interface ContactIcon {
 
 interface NavItem {
   label: string;
-  page?: string;
+  page: string; // Change this to a required string
   contactIcons?: ContactIcon[];
 }
 
@@ -41,7 +33,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [navbar, setNavbar] = useState(false);
   return (
-    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-slate-700 text-slate-200 dark:border-b dark:border-stone-600 cursor-pointer">
+    <header className="w-full mx-auto px-4 sm:px-20 fixed top-0 z-50 shadow bg-slate-700 text-slate-200 dark:border-b dark:border-stone-600 cursor-pointer">
       <div className="justify-between md:items-center md:flex">
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -74,7 +66,7 @@ export default function Navbar() {
                     key={idx}
                     to={item.page}
                     className={
-                      "block lg:inline-block text-slate-200  hover:text-neutral-500 dark:text-neutral-100"
+                      "block lg:inline-block text-slate-200 hover:text-neutral-500 dark:text-neutral-100"
                     }
                     activeClass="active"
                     spy={true}
@@ -88,7 +80,6 @@ export default function Navbar() {
                 );
               })}
             </div>
-            
           </div>
         </div>
       </div>
